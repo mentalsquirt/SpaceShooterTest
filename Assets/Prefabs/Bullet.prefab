@@ -29,12 +29,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8868706377808322364}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -0.23472685, y: -1.4260609, z: 0}
+  m_LocalPosition: {x: -1.7586396, y: -1.2752974, z: 0}
   m_LocalScale: {x: 2, y: 1.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!212 &6349724691767722289
 SpriteRenderer:
@@ -185,3 +185,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   target: {fileID: 0}
+  hitFX: {fileID: 2631121183422470615, guid: 7a7a4d050f89540beb59bec8416c101c, type: 3}

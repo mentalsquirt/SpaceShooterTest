@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public float speed;
+    public GameObject hitFX;
 
     void Update()
     {
@@ -15,6 +16,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bound"))
         {
+            Instantiate(hitFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
             collision.gameObject.GetComponent<Health>().TakeDamage(1);
         }

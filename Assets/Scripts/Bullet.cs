@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float speed = 10f;
     public Transform target;
     private Vector2 lastDirection;
+    public GameObject hitFX;
 
     public void SetTarget(Transform newTarget)
     {
@@ -43,7 +44,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // any additional logic for what happens when a bullet hits an enemy
+            Instantiate(hitFX, transform.position, Quaternion.identity);
             Destroy(gameObject);
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
         }
