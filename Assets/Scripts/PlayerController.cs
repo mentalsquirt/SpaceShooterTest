@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
             bullet.GetComponent<Bullet>().SetTarget(nearestEnemy.transform);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.shootSound);
         }
     }
 

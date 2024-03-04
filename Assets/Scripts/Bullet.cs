@@ -45,6 +45,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Instantiate(hitFX, transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.hitSound);
             Destroy(gameObject);
             collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(1);
         }

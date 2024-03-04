@@ -13,6 +13,7 @@ public class EnemyHealth : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(deathFX, transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.explosionOnEnemyDeathSound);
             Destroy(gameObject);
             GameManager.Instance.EnemyDefeated();
         }

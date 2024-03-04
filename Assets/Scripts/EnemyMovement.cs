@@ -17,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Bound"))
         {
             Instantiate(hitFX, transform.position, Quaternion.identity);
+            AudioManager.Instance.PlaySound(AudioManager.Instance.explosionOnPlayerHitSound);
             Destroy(gameObject);
             collision.gameObject.GetComponent<Health>().TakeDamage(1);
         }
