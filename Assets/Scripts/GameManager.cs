@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver(bool won)
     {
+        enemiesDefeated = 0;
         UIManager.Instance.ShowEndScreen(won);
     }
 
